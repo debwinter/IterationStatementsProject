@@ -5,40 +5,54 @@ namespace IterationStatements
 {
     class Program
     {
+        //--------------------EXERCISE 1----------------------------
+
+        public static void Exercise1()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
         static void Main(string[] args)
         {
-                //TODO - Read each comment and complete its instruction
-                // like the example below
-
-                //Create a List called "numbers" - DONE!
-                var numbers = new List<int>();
             
-            //-----START HERE------------------------------------------
+            for (int x = 0; x < 15; x++)
+            {
+                Exercise1();
+            }
+            //------------End of exercise
+
+            //--------------------EXERCISE 2----------------------------
+            var numbers = new List<int>();
+
             //Create a variable of type int and name it num
             //initialize the variable with a value of 0
-
+            int num = 0;
 
 
             // Create a do-while loop and use the template below:
-
+            do
             {
                 // Increment num by 1
-
+                num++;
                 // Then add num to the collection - numbers
-                    // Hint: reference num inside of the Add method's parentheses
-                numbers.Add(/* num */);
+                // Hint: reference num inside of the Add method's parentheses
+                numbers.Add(num);
 
-            } // <---- While your variable is less than 100
+            } while (num < 100); // <---- While your variable is less than 100
 
 
 
             // Create a while loop
-            // <--- While num is less than 200
+            while (num < 200) // <--- While num is less than 200
             {
                 // Increment num by 1
                 // Then add num to the collection numbers
-                    //HINT: copy how this was done in the do while loop
-
+                //HINT: copy how this was done in the do while loop
+                num++;
+                numbers.Add(num);
             }
 
 
@@ -49,7 +63,10 @@ namespace IterationStatements
             // Create a foreach loop using the collection - numbers
                 //In the scope of the foreach loop, print each number in numbers
              
-
+            foreach (int n in numbers)
+            {
+                Console.WriteLine(n);
+            }
 
             Console.WriteLine("");
             Console.WriteLine("Decrease:");
@@ -62,8 +79,11 @@ namespace IterationStatements
                 // Decrement i by 1
 
             //start for loop here
+
+            for (int i = 199; i <= numbers.Count && i >= 0; i--)
             {
                 // place numbers[i] inside of the Console.WriteLine() method
+                Console.WriteLine(numbers[i]);
             }
 
             //------------End of exercise
